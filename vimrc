@@ -1,4 +1,4 @@
-"The Original Version
+" This is a vim setup owned by Leo Liu
 set nocompatible              " be iMproved, required
 filetype off                  " required
 syntax on
