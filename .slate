@@ -1,0 +1,42 @@
+# This is the default .slate file.
+# If no ~/.slate file exists this is the file that will be used.
+
+config defaultToCurrentScreen true
+config nudgePercentOf screenSize
+config resizePercentOf screenSize
+
+# Resize Bindings
+# 2 row x 3 column
+bind q:shift;cmd       move 0;0 screenSizeX/3;screenSizeY/2
+bind w:shift;cmd       move screenSizeX/3;0 screenSizeX/3;screenSizeY/2
+bind e:shift;cmd       move 2*screenSizeX/3;0 screenSizeX/3;screenSizeY/2
+bind a:shift;cmd       move 0;screenSizeY/2 screenSizeX/3;screenSizeY/2
+bind s:shift;cmd       move screenSizeX/3;screenSizeY/2 screenSizeX/3;screenSizeY/2
+bind d:shift;cmd       move 2*screenSizeX/3;screenSizeY/2 screenSizeX/3;screenSizeY/2
+# 2 row x 2 column
+bind y:shift;cmd       move 0;0 screenSizeX/2;screenSizeY/2
+bind o:shift;cmd       move screenSizeX/2;0 screenSizeX/2;screenSizeY/2
+bind b:shift;cmd       move 0;screenSizeY/2 screenSizeX/2;screenSizeY/2
+bind .:shift;cmd       move screenSizeX/2;screenSizeY/2 screenSizeX/2;screenSizeY/2
+
+
+
+# Push Bindings
+bind l:shift;cmd  push right bar-resize:screenSizeX/2
+bind h:shift;cmd    push left  bar-resize:screenSizeX/2
+bind k:shift;cmd      push up    bar-resize:screenSizeY/2
+bind j:shift;cmd    push down  bar-resize:screenSizeY/2
+
+
+# Focus Bindings
+bind l:alt;cmd    focus right
+bind h:alt;cmd    focus left
+bind k:alt;cmd      focus up
+bind j:alt;cmd    focus down
+bind k:ctrl;alt;cmd  focus behind
+bind j:ctrl;alt;cmd focus behind
+
+# Window Hints
+bind esc:cmd hint
+bind f12:cmd relaunch
+bind delete:ctrl;alt;cmd undo
