@@ -69,7 +69,7 @@ let g:airline_theme='molokai'
 Plugin 'scrooloose/syntastic'
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 
 
@@ -120,7 +120,7 @@ set cursorcolumn
 map j gj
 map k gk
 "set syntax
-
+set wrap
 "set windows size
 set lines=48 columns=88
 "set font
@@ -135,9 +135,12 @@ set autoindent
 set expandtab
 set cindent
 
+" set folding
 set foldmethod=syntax   
+set nofoldenable
 
-
+"set color
+set t_Co=256
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin on    " required
